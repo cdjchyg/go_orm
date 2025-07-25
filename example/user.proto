@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "./pb";
+
+// 用户信息
+message User {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    int32 age = 4;
+    repeated string tags = 5;
+    map<string, string> metadata = 6;
+    UserProfile profile = 7;
+    //repeated UserProfile profileList = 8;
+    //map<string, UserProfile> profileMap = 9;
+}
+
+// 用户详细信息
+message UserProfile {
+    string avatar_url = 1;
+    string bio = 2;
+    //repeated string interests = 3;
+    //map<string, int32> scores = 4;
+} 
